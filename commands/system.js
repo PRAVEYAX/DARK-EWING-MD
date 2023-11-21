@@ -250,7 +250,7 @@ _Powered by ${Config.ownername}_
 `;
             let aliveMessage = {
                 image: {
-                    url: await botpic(),
+                    url: 'https://telegra.ph/file/73eefe66a1777cf649945.jpg',
                 },
                 caption: alivtxt,
                 footer: tlang().footer,
