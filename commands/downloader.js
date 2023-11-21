@@ -1,13 +1,4 @@
-/**
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/ 
+
  
 const { tlang, ringtone, cmd,fetchJson, sleep, botpic,ffmpeg, getBuffer, pinterest, prefix, Config } = require('../lib')
 const { mediafire } = require("../lib/mediafire.js");
@@ -37,6 +28,7 @@ cmd({
             pattern: "tts",
             desc: "text to speech.",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<Hii,this is izuku>',
         },
@@ -65,6 +57,7 @@ cmd({
         pattern: "ydesc",
         desc: "Gives descriptive info of query from youtube..",
         category: "downloader",
+	react: "✅",
         filename: __filename,
         use: '<yt search text>',
     },
@@ -98,6 +91,7 @@ cmd({
             pattern: "video",
             desc: "Downloads video from yt.",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<808-juice wrld >',
         },
@@ -160,6 +154,7 @@ cmd({
             pattern: "apk",
             desc: "Downloads apks  .",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<add sticker url.>',
         },
@@ -224,6 +219,7 @@ cmd({
             pattern: "song",
             desc: "Sends info about the query(of youtube video/audio).",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<faded-Alan walker.>',
         },
@@ -262,6 +258,7 @@ cmd({
             pattern: "ringtone",
             desc: "Downloads ringtone.",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<ringtone name>',
         },
@@ -277,6 +274,7 @@ cmd({
             pattern: "pint",
             desc: "Downloads image from pinterest.",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<text|image name>',
         },
@@ -320,6 +318,7 @@ cmd({
             pattern: "mediafire",
             desc: "Downloads zip from Mediafire.",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<url of mediafire>',
         },
@@ -328,7 +327,7 @@ cmd({
             if (!isUrl(text.split(" ")[0]) && !text.split(" ")[0].includes("mediafire.com")) return reply(`The link you provided is invalid`);
             const baby1 = await mediafire(text);
             if (baby1[0].size.split("MB")[0] >= 999) return reply("*File Over Limit* " + util.format(baby1));
-            const result4 = `*ᴵᶻᵁᴷᵁ Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*
+            const result4 = `*ᴅᴀʀᴋ ᴇᴡɪɴɢ Mᴇᴅɪᴀғɪʀᴇ Dᴏᴡɴʟᴏᴀᴅᴇʀ*
 *Nᴀᴍᴇ* : ${baby1[0].nama}
 *Sɪᴢᴇ* : ${baby1[0].size}
 *Mɪᴍᴇ* : ${baby1[0].mime}
@@ -353,6 +352,7 @@ cmd({
             alias :['song'],
             desc: "Downloads audio from youtube.",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<text>',
         },
@@ -416,6 +416,7 @@ cmd({
             pattern: "ytmp4",
             desc: "Downloads video from youtube.",
             category: "downloader",
+	    react: "✅",
             filename: __filename,
             use: '<yt video url>',
         },
@@ -484,6 +485,7 @@ cmd({
         pattern: "ytmp3",
         desc: "Downloads audio by yt link.",
         category: "downloader",
+	react: "✅",
         use: '<yt video url>',
     },
     async(Void, citel, text) => {
@@ -560,6 +562,7 @@ cmd({
         pattern: "ytdoc",
         desc: "Downloads audio by yt link as document.",
         category: "downloader",
+	react: "✅",
         use: '<ytdoc video url>',
     },
     async(Void, citel, text) => {
