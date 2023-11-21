@@ -1,20 +1,4 @@
-/**
-██╗███████╗██╗   ██╗██╗  ██╗██╗   ██╗    ███╗   ███╗██████╗ 
-██║╚══███╔╝██║   ██║██║ ██╔╝██║   ██║    ████╗ ████║██╔══██╗
-██║  ███╔╝ ██║   ██║█████╔╝ ██║   ██║    ██╔████╔██║██║  ██║
-██║ ███╔╝  ██║   ██║██╔═██╗ ██║   ██║    ██║╚██╔╝██║██║  ██║
-██║███████╗╚██████╔╝██║  ██╗╚██████╔╝    ██║ ╚═╝ ██║██████╔╝
-╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝ ╚═════╝     ╚═╝     ╚═╝╚═════╝ 
-                                                            
- Copyright (C) 2022.
- Licensed under the  GPL-3.0 License;
- You may not use this file except in compliance with the License.
- It is supplied in the hope that it may be useful.
- * @project_name : Secktor-Md
- * @author : SamPandey001 <https://github.com/SamPandey001>
- * @description : Secktor,A Multi-functional whatsapp bot.
- * @version 0.0.6
- **/
+
 
 const os = require('os')
 const moment = require("moment-timezone")
@@ -31,14 +15,15 @@ const _0x55b1d0=_0x450b;function _0x3e06(){const _0x4fd649=['「★」','countDo
 Secktor.cmd({
             pattern: "list",
             desc: "list menu",
-            category: "general"
+            category: "general",
+            react: "😈"
         },
         async(Void, citel) => {
             const { commands } = require('../lib');
             let str = `
 ┏━━━━━•❃〘 ` + fancytext(Config.ownername.split(' ')[0], 58) + ` 〙❃•━━━━━┓`
             str += `
-┃ ⛥┏━━━━━•❃°•°•━━━━━•❃°•°•      
+┃ ⛥┏━━━━━•❃°EWING°•━━━━━•❃°•°•      
 •͙͙✧⃝•͙ User: ${citel.pushName}
 •͙͙✧⃝•͙ Theme: ${tlang().title}
 •͙͙✧⃝•͙│ Prefix: ${prefix}
@@ -52,9 +37,9 @@ Secktor.cmd({
 for (let i = 0; i < commands.length; i++) 
 {
      if(commands[i].pattern==undefined) continue
-     str +=       `✰ ${i+1} *${fancytext(commands[i].pattern,1)}*\n` 
+     str +=       `➺ ${i+1} *${fancytext(commands[i].pattern,1)}*\n` 
       if (commands[i].desc === undefined) commands[i].desc = "";
-      str += `✰ ${fancytext(commands[i].desc, 1)}\n`
+      str += `➺ ${fancytext(commands[i].desc, 1)}\n`
 }
             return await Void.sendMessage(citel.chat, { image: { url: THUMB_IMAGE }, caption: str })
         }
