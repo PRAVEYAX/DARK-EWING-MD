@@ -114,14 +114,14 @@ cmd({
         filename: __filename,
     },
     async(Void, citel) => {
-        let { data } = await axios.get('https://api.github.com/repos/excelottah6/IZUKU-MD')
+        let { data } = await axios.get('https://api.github.com/repos/excelottah6/DARK-EWING-MD')
         let cap = `Hey ${citel.pushName}\n
 ╭┈─────────────────────    .· * • ˚
 │*⭐ Total Stars:* ${data.stargazers_count} stars
 │*🍴 Forks:* ${data.forks_count} forks
-│*📡 Repo:* https://github.com/excelottah6/IZUKU-MD
-│*🏘Group:* https://chat.whatsapp.com/BEhEne7RdGBC3y5vYltuxL
-│*🧑‍💻Deploy IZUKU MD*:https://github.com/excelottah6/IZUKU-MD
+│*📡 Repo:* https://github.com/KING-AMDA-MD/DARK-EWING-MD
+│*🏘Group:* https://chat.whatsapp.com/JzQlteOHVzx9ELq5kPZzY6
+│*🧑‍💻Deploy EWING MD*:https://github.com/excelottah6/DARK-EWING-MD
 ╰──────────────────────✬      * ˚  ✶`
         let buttonMessaged = {
             image: { url: await botpic() },
